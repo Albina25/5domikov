@@ -1,0 +1,22 @@
+.main-block {
+  margin-top: 60px;
+  flex: 1;
+}
+.footer-block {
+  width: 100%;
+  display: flex;
+  height: var(--header-size);
+  align-items: center;
+}
+.container {
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.help-block {
+  color: red;
+  font-size: 0.7rem;
+}
