@@ -13,16 +13,16 @@ $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 AdminAsset::register($this);
 ?>
-<div class="house-view container">
+<div class="house-view container flex-wrap">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>Дом <?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'tid' => $model->tid], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'tid' => $model->tid], [
+        <?= Html::a('Обновить', ['update', 'tid' => $model->tid], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'tid' => $model->tid], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Вы уверены, что хотите удалить дом?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -32,9 +32,9 @@ AdminAsset::register($this);
         'model' => $model,
         'attributes' => [
             'id',
+            'title',
             'price_regular',
             'price_weekend',
-            'tid',
             'deposit',
         ],
     ]) ?>

@@ -2,20 +2,34 @@
   margin-top: 60px;
   flex: 1;
 }
+
 .footer-block {
   width: 100%;
   display: flex;
   height: var(--header-size);
   align-items: center;
 }
+
 .container {
   padding: 0 2rem;
   margin: 0 auto;
   max-width: 100%;
 }
+
+.flex-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
 .mt-1 {
   margin-top: 1rem !important;
 }
+
+.mb-1 {
+  margin-bottom: 1rem !important;
+}
+
 .help-block {
   color: red;
   font-size: 0.7rem;

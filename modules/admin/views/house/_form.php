@@ -14,6 +14,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id')->textInput() ?>
 
+    <?= $form->field($model, 'title')->textInput() ?>
+
     <?= $form->field($model, 'price_regular')->textInput() ?>
 
     <?= $form->field($model, 'price_weekend')->textInput() ?>

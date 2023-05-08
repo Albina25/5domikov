@@ -15,11 +15,11 @@ AdminAsset::register($this);
 $this->title = 'Домики';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="house-index container">
+<div class="house-index container flex-wrap">
 
-    <h1 class="mt-1"><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p class="mt-1">
+    <p>
         <?= Html::a('Добавить домик', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
@@ -32,9 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
             /*['class' => 'yii\grid\SerialColumn'],*/
 
             'id',
+            'title',
             'price_regular',
             'price_weekend',
-            'tid',
             'deposit',
             [
                 'class' => ActionColumn::className(),

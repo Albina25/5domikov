@@ -28,7 +28,8 @@ class House extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'price_regular', 'price_weekend', 'deposit'], 'default', 'value' => null],
+            [['title', 'price_weekend', 'deposit'], 'default', 'value' => null],
+            ['title', 'string'],
             [['id', 'price_regular', 'price_weekend', 'deposit'], 'integer'],
             ['price_regular', 'required', 'message' => 'Поле обязательно для заполнения'],
             ['id', 'unique', 'message' => 'Домик с таким номер уже существует'],
@@ -42,6 +43,7 @@ class House extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'Номер домика',
+            'title' => 'Название',
             'price_regular' => 'Цена обычная',
             'price_weekend' => 'Цена в выходные',
             'deposit' => 'Депозит'

@@ -53,10 +53,10 @@ class HouseController extends Controller
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($tid)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($tid),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -71,7 +71,7 @@ class HouseController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'tid' => $model->tid]);
+                return $this->redirect(['view', 'id' => $model->id]);
             }
         } else {
             $model->loadDefaultValues();
@@ -89,12 +89,12 @@ class HouseController extends Controller
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($tid)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($tid);
+        $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'tid' => $model->tid]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
@@ -109,9 +109,9 @@ class HouseController extends Controller
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($tid)
+    public function actionDelete($id)
     {
-        $this->findModel($tid)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -123,9 +123,9 @@ class HouseController extends Controller
      * @return House the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($tid)
+    protected function findModel($id)
     {
-        if (($model = House::findOne(['tid' => $tid])) !== null) {
+        if (($model = House::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

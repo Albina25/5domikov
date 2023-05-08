@@ -18,6 +18,7 @@ class HouseSearch extends House
     {
         return [
             [['id', 'price_regular', 'price_weekend', 'tid', 'deposit'], 'integer'],
+            ['title', 'string'],
         ];
     }
 

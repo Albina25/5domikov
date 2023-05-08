@@ -79,7 +79,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 <footer id="footer" class="footer-block container">
     <div class="row text-muted">
-        <div class="footer-block__years">&copy; <?= Html::encode($this->title) ?> <?= date('Y') ?></div>
+        <div class="footer-block__years">&copy; Пять домиков <?= date('Y') ?></div>
     </div>
 </footer>
 
