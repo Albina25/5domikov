@@ -29,6 +29,11 @@
   margin: 0 auto;
   max-width: 100%;
 }
+.flex-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
 .logo {
   display: flex;
   height: 60px;
@@ -124,14 +129,14 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    gap: 0.5rem;
   }
   &__part {
     width: 50%;
-    margin: 0 2px;
   }
   &__info {
     background-color: #fff;
-    padding: 4px;
+    padding: 8px;
     border: 1px solid #ececec;
     position: relative;
     //box-shadow: 0 4px 40px rgb(10 0 0 / 8%);
@@ -148,16 +153,17 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    //padding: 0 4px;
   }
 
   .column {
     flex: 50%;
-    padding: 0 4px;
+    //padding: 0 4px;
   }
 
   .column img {
-    margin-top: 8px;
+    padding: 4px;
+    //margin-top: 8px;
     vertical-align: middle;
   }
 }

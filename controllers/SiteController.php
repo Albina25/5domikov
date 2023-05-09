@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Rent;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -61,7 +62,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new Rent();
+        $model->id=2;
+
+        return $this->render('index', ['model' => $model]);
     }
 
     /**

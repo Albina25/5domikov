@@ -1,6 +1,8 @@
 <?php
+use app\models\Rent;
 
 /** @var yii\web\View $this */
+/** @var app\models\Rent $model */
 
 $this->title = 'Пять домиков';
 ?>
@@ -19,7 +21,7 @@ $this->title = 'Пять домиков';
             <?php echo $this->render('parts/prices');?>
         </div>
         <div id="booking" class="main-block__info">
-            <?php echo $this->render('parts/booking');?>
+            <?php echo $this->render('parts/booking', ['model' => $model]);?>
         </div>
     </div>
     <div class="main-block__part main-block__images">

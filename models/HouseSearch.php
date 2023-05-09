@@ -18,7 +18,7 @@ class HouseSearch extends House
     {
         return [
             [['id', 'price_regular', 'price_weekend', 'tid', 'deposit'], 'integer'],
-            ['title', 'string'],
+            [['title'], 'safe'],
         ];
     }
 
@@ -64,6 +64,8 @@ class HouseSearch extends House
             'tid' => $this->tid,
             'deposit' => $this->deposit,
         ]);
+
+        $query->andFilterWhere(['ilike', 'title', $this->title]);
 
         return $dataProvider;
     }

@@ -16,6 +16,9 @@ use Yii;
  * @property int|null $payment_status
  * @property string|null $created_at
  * @property string|null $comment
+ * @property string|null $name
+ * @property string|null $email
+ * @property string|null $phone
  */
 class Rent extends \yii\db\ActiveRecord
 {
@@ -33,10 +36,12 @@ class Rent extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['date_start', 'date_end', 'phone'], 'required'],
+            [['date_start', 'date_end'], 'date', 'format'=>'php:Y-m-d'],
             [['house_id', 'price_total', 'status', 'payment_status'], 'default', 'value' => null],
             [['house_id', 'price_total', 'status', 'payment_status'], 'integer'],
             [['date_start', 'date_end', 'created_at'], 'safe'],
-            [['comment'], 'string'],
+            [['comment', 'name', 'phone', 'email'], 'string'],
         ];
     }
 
@@ -47,14 +52,17 @@ class Rent extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'house_id' => 'House ID',
-            'date_start' => 'Date Start',
-            'date_end' => 'Date End',
-            'price_total' => 'Price Total',
-            'status' => 'Status',
-            'payment_status' => 'Payment Status',
-            'created_at' => 'Created At',
-            'comment' => 'Comment',
+            'house_id' => 'Номер дома',
+            'date_start' => 'Заезд',
+            'date_end' => 'Выезд',
+            'price_total' => 'Итоговая цена',
+            'status' => 'Статус аренды',
+            'payment_status' => 'Статус оплаты',
+            'created_at' => 'Создан',
+            'comment' => 'Кооментарий',
+            'name' => 'Имя',
+            'Email' => 'Email',
+            'Phone' => 'Телефон для связи'
         ];
     }
 }

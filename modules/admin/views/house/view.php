@@ -1,28 +1,26 @@
 <?php
 
-use app\assets\AdminAsset;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
 /** @var app\models\House $model */
 
-$this->title = $model->id;
+$this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Houses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
-AdminAsset::register($this);
 ?>
 <div class="house-view container flex-wrap">
 
-    <h1>Дом <?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Обновить', ['update', 'tid' => $model->tid], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Удалить', ['delete', 'tid' => $model->tid], [
+        <?= Html::a('Обновить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Вы уверены, что хотите удалить дом?',
+                'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -32,10 +30,11 @@ AdminAsset::register($this);
         'model' => $model,
         'attributes' => [
             'id',
-            'title',
             'price_regular',
             'price_weekend',
+            'tid',
             'deposit',
+            'title',
         ],
     ]) ?>
 

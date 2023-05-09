@@ -35,6 +35,11 @@
   margin: 0 auto;
   max-width: 100%; }
 
+.flex-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; }
+
 .logo {
   display: flex;
   height: 60px;
@@ -112,15 +117,15 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  width: 100%; }
+  width: 100%;
+  gap: 0.5rem; }
 
 .main-block__part {
-  width: 50%;
-  margin: 0 2px; }
+  width: 50%; }
 
 .main-block__info {
   background-color: #fff;
-  padding: 4px;
+  padding: 8px;
   border: 1px solid #ececec;
   position: relative;
   margin-bottom: 0.5rem;
@@ -134,15 +139,13 @@
 
 .main-block .row {
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px; }
+  flex-wrap: wrap; }
 
 .main-block .column {
-  flex: 50%;
-  padding: 0 4px; }
+  flex: 50%; }
 
 .main-block .column img {
-  margin-top: 8px;
+  padding: 4px;
   vertical-align: middle; }
 
 .footer-block {
