@@ -37,6 +37,10 @@ $config = [
                 "charset" => "UTF-8",
             ],
         ],
+        'formatter' => [
+            'dateFormat' => 'php:dd.mm.yyyy',
+        ],
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

@@ -42,6 +42,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         'options' => ['class' => 'navbar-nav d-flex justify-content-center'],
         'items' => [
             ['label' => 'Главная', 'url' => ['/admin/default/index']],
+            ['label' => 'Заявки', 'url' => ['/admin/rent/index']],
             ['label' => 'Дома', 'url' => ['/admin/house/index']],
             ['label' => 'Оплата', 'url' => ['/admin/payment/index']],
             /*Yii::$app->user->isGuest

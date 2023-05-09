@@ -19,6 +19,7 @@ use Yii;
  * @property string|null $name
  * @property string|null $email
  * @property string|null $phone
+ * @property string|null $guests
  */
 class Rent extends \yii\db\ActiveRecord
 {
@@ -61,8 +62,9 @@ class Rent extends \yii\db\ActiveRecord
             'created_at' => 'Создан',
             'comment' => 'Кооментарий',
             'name' => 'Имя',
-            'Email' => 'Email',
-            'Phone' => 'Телефон для связи'
+            'email' => 'Email',
+            'phone' => 'Телефон',
+            'guests' => 'Количество гостей',
         ];
     }
 }

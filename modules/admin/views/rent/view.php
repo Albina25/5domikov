@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\models\House $model */
+/** @var app\models\Rent $model */
 
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Houses', 'url' => ['index']];
+$this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Rents', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="house-view container flex-wrap">
+<div class="rent-view container flex-wrap">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -30,11 +30,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'price_regular',
-            'price_weekend',
-            'tid',
-            'deposit',
-            'title',
+            'house_id',
+            'price_total',
+            'status',
+            'payment_status',
+            'comment:ntext',
+            'guests',
+            'name',
+            'email:email',
+            'phone',
+            'created_at',
+            'date_start',
+            'date_end',
         ],
     ]) ?>
 

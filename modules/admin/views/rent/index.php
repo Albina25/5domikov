@@ -1,24 +1,24 @@
 <?php
 
-use app\models\House;
+use app\models\Rent;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var app\models\HouseSearch $searchModel */
+/** @var app\models\RentSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Дома';
+$this->title = 'Заявки на аренду';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="house-index container flex-wrap">
+<div class="rent-index container flex-wrap">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Добавить дом', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать заявку', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -26,16 +26,27 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'layout' => "{items}",
         'columns' => [
+            /*['class' => 'yii\grid\SerialColumn'],*/
+
             'id',
-            'title',
-            'price_regular',
-            'price_weekend',
-            'deposit',
+            'house_id',
+            'name',
+            'date_start',
+            'date_end',
+            //'price_total',
+            //'status',
+            //'payment_status',
+            //'comment:ntext',
+            //'guests',
+
+            'email:email',
+            'phone',
+            //'created_at',
+
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, House $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Rent $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                  }
             ],
