@@ -3,6 +3,8 @@ use app\models\Rent;
 
 /** @var yii\web\View $this */
 /** @var app\models\Rent $model */
+/** @var boolean $isRentSaved */
+/** @var string $error */
 
 $this->title = 'Пять домиков';
 ?>
@@ -21,7 +23,7 @@ $this->title = 'Пять домиков';
             <?php echo $this->render('parts/prices');?>
         </div>
         <div id="booking" class="main-block__info">
-            <?php echo $this->render('parts/booking', ['model' => $model]);?>
+            <?php echo $this->render('parts/booking', ['model' => $model, 'isRentSaved' => $isRentSaved, 'error' => $error]);?>
         </div>
     </div>
     <div class="main-block__part main-block__images">

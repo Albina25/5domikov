@@ -1,50 +1,91 @@
 <?php
 /** @var app\models\Rent $model */
+/** @var boolean $isRentSaved */
+/** @var string $error */
 
+use http\Url;
 use kartik\date\DatePicker;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
 use yii\widgets\ActiveForm;
 
+/*$script = <<< JS
+$('#rent-date_start').change(function (){
+    let dateStart = $(this).val();
+    $.get('site/test', {dateStart: dateStart}, function(data) {
+        alert(data);
+    });
+});
+JS;
+$this->registerJs($script);*/
+
 ?>
 
 <h3 class="mb-10">Бронирование домиков</h3>
-<?php $form = ActiveForm::begin([
-    'id' => 'rent-form',
-    'options' => ['class' => 'form-field position-relative flex-wrap'],
-]); ?>
+    <?php Pjax::begin([
+        "id" => "booking-form-pjax",
+        "enablePushState" => false,
+    ]);
+    ?>
 
-<?= $form->field($model, 'date_start')->widget(DatePicker::classname(), [
-    'name' => 'dp_1',
-    'type' => DatePicker::TYPE_INPUT,
-    'options' => ['placeholder' => 'Дата заезда'],
-    'pluginOptions' => [
-        'autoclose' => true,
-        'format' => 'dd.mm.yyyy',
-    ]
-]);?>
+    <?php $form = ActiveForm::begin([
+        'id' => 'rent-form',
+        'action' => ['site/test'],
+        'options' => [
+            'data-pjax' => 1,
+            'class' => 'form-field position-relative flex-wrap',
+        ],
 
-<?= $form->field($model, 'date_end')->widget(DatePicker::classname(), [
-    'name' => 'dp_2',
-    'type' => DatePicker::TYPE_INPUT,
-    'options' => ['placeholder' => 'Дата выезда'],
-    'pluginOptions' => [
-        'autoclose' => true,
-        'format' => 'dd.mm.yyyy',
-    ]
-]);?>
+    ]); ?>
+    <div>
+        <label for="countHouses" class="form-group">Количество домиков</label>
+        <?= Html::input('number', 'countHouses', 1,  ['class' => 'form-control', 'id' => 'countHouses']) ?>
+    </div>
 
-<?= $form->field($model, 'name') ?>
+    <?= $form->field($model, 'date_start')->widget(DatePicker::classname(), [
+        'name' => 'dp_1',
+        'type' => DatePicker::TYPE_INPUT,
+        'options' => ['placeholder' => 'Дата заезда'],
+        'pluginOptions' => [
+            'autoclose' => true,
+            'format' => 'dd.mm.yyyy',
+            'todayHighlight' => true,
+            'startDate' => date('d.m.Y', time())
+        ]
+    ]);?>
 
-<?= $form->field($model, 'email')->input('email')->textInput(['placeholder' => 'Email для отправки брони']); ?>
+    <?= $form->field($model, 'date_end')->widget(DatePicker::classname(), [
+        'name' => 'dp_2',
+        //'value' => date('d-M-Y', strtotime('+2 days')),
+        'type' => DatePicker::TYPE_INPUT,
+        'options' => ['placeholder' => 'Дата выезда'],
+        'pluginOptions' => [
+            'autoclose' => true,
+            'format' => 'dd.mm.yyyy',
+            'todayHighlight' => true,
+            'startDate' => date('d.m.Y', time())
+        ]
+    ]);?>
 
-<?= $form->field($model, 'phone')->widget(\yii\widgets\MaskedInput::class, ['mask' => '+7(999)999-99-99']) ?>
+    <?= $form->field($model, 'name') ?>
 
-<div class="form-group">
-    <?= Html::submitButton('Забронировать', ['class' => 'btn btn-primary']) ?>
-</div>
+    <?= $form->field($model, 'email')->input('email')->textInput(['placeholder' => 'Email для отправки брони']); ?>
 
-<?php ActiveForm::end(); ?>
+    <?= $form->field($model, 'phone')->widget(\yii\widgets\MaskedInput::class, ['mask' => '+7(999)999-99-99']) ?>
+
+    <?php if ($isRentSaved === true) { ?>
+        <div class="text-success">Заявка успешно принята</div>
+    <?php } ?>
+    <?php if ($error) { ?>
+        <div class="text-error"><?=$error?></div>
+    <?php } ?>
+
+   <div class="form-group">
+        <?= Html::submitButton('Забронировать', ['class' => 'btn btn-primary btn-test']) ?>
+   </div>
+
+    <?php ActiveForm::end(); ?>
+<?php Pjax::end();?>
 
 <!--<form>
     <div class="form-field position-relative">

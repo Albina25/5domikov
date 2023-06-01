@@ -1,3 +1,9 @@
+@import "../variables.scss";
+
+.btn {
+  font-size: 1rem;
+}
+
 .main-block {
   margin-top: 60px;
   flex: 1;
@@ -31,6 +37,18 @@
 }
 
 .help-block {
-  color: red;
+  color: var(--help-color);
   font-size: 0.7rem;
+}
+
+.text-error {
+  color: var(--help-color);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.bg-waiting {
+  background-color: rgba(var(--waiting-color-rgb), 0.7) !important;
 }

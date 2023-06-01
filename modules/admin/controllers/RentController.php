@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use app\models\Rent;
 use app\models\RentSearch;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -70,8 +71,13 @@ class RentController extends Controller
         $model = new Rent();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+            if ($model->load($this->request->post())) {
+                if (!$model->isDublicate() && $model->save()) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                } else {
+                    $error = 'Такая заявка уже есть';
+                }
+
             }
         } else {
             $model->loadDefaultValues();
@@ -79,6 +85,7 @@ class RentController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'error' => $error,
         ]);
     }
 
@@ -93,12 +100,17 @@ class RentController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost && $model->load($this->request->post())) {
+            if (!$model->isDublicate() && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                $error = 'Такая заявка уже есть';
+            }
         }
 
         return $this->render('update', [
             'model' => $model,
+            'error' => $error,
         ]);
     }
 
@@ -130,5 +142,15 @@ class RentController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionChangeStatus($id, $status)
+    {
+        $model = $this->findModel($id);
+        if ($model) {
+            $model->status = $status;
+            $model->save();
+        }
+        return $this->redirect(['index']);
     }
 }

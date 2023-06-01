@@ -1,4 +1,7 @@
 @import "variables.scss";
+.btn {
+  font-size: 1rem;
+}
 .header-line {
   background-color: #063949;
   box-shadow: 1px 1px 1px 1px #063949;
@@ -232,6 +235,25 @@
     appearance: none;
   }
 }
+
+.help-block {
+  color: var(--help-color);
+  font-size: 1.2rem;
+}
+
+.text-error {
+  color: var(--help-color);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.modal-success {
+  height: 50%;
+  width: 50%;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;

@@ -2,9 +2,17 @@
   --header-size: 65px;
   --main-color: #063949;
   --main-color-rgb: 6, 57, 73;
+  --help-color: #8B0000;
+  --help-color-rgb: 139, 0, 0;
+  --waiting-color: #FBB117;
+  --waiting-color-rgb: 251, 177, 23;
+  --success-color: #198754;
   --gray: #bdbdbd;
   --gray-dark: #212529;
   --white: #ffffff; }
+
+.btn {
+  font-size: 1rem; }
 
 .header-line {
   background-color: #063949;
@@ -205,6 +213,20 @@
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none; }
+
+.help-block {
+  color: var(--help-color);
+  font-size: 1.2rem; }
+
+.text-error {
+  color: var(--help-color); }
+
+.text-success {
+  color: var(--success-color); }
+
+.modal-success {
+  height: 50%;
+  width: 50%; }
 
 @media (max-width: 768px) {
   .container {

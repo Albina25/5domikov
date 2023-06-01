@@ -1045,3 +1045,2837 @@ $_SERVER = [
     'argv' => [],
     'argc' => 0,
 ]" while reading upstream, client: 172.20.0.1, server: post2.loc, request: "GET /auth/test HTTP/1.1", upstream: "fastcgi://172.20.0.3:9000", host: "post2.loc"
+2023/05/24 09:38:00 [error] 33#33: *416 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 75. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 75. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' =>
+2023/05/24 09:38:00 [error] 33#33: *416 FastCGI sent in stderr: "nge;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONTENT_LENGTH' => '269',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '52588',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '269',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1684921078.580298,
+    'REQUEST_TIME' => 1684921078,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST / HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/24 09:39:50 [error] 24#24: *421 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 78. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 78. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' =>
+2023/05/24 09:39:50 [error] 24#24: *421 FastCGI sent in stderr: " => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONTENT_LENGTH' => '269',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '52604',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '269',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1684921189.253227,
+    'REQUEST_TIME' => 1684921189,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST / HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/24 12:49:49 [error] 27#27: *464 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 153. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 153. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' 
+2023/05/24 12:49:49 [error] 27#27: *464 FastCGI sent in stderr: " (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '269',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '52720',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/booking',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '269',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1684932588.637596,
+    'REQUEST_TIME' => 1684932588,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site/booking HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 06:42:03 [error] 25#25: *569 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 06:42:03 [error] 25#25: *569 FastCGI sent in stderr: "0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53008',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1684996921.670478,
+    'REQUEST_TIME' => 1684996921,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 06:42:52 [error] 25#25: *569 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentE" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 06:42:52 [error] 25#25: *569 FastCGI sent in stderr: "xception: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a
+2023/05/25 06:46:40 [error] 25#25: *573 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 06:46:40 [error] 25#25: *573 FastCGI sent in stderr: "992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53022',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1684997199.334545,
+    'REQUEST_TIME' => 1684997199,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referr
+2023/05/25 06:47:22 [error] 25#25: *573 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 06:47:22 [error] 25#25: *573 FastCGI sent in stderr: "=> 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 07:16:47 [error] 28#28: *578 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 07:16:47 [error] 28#28: *578 FastCGI sent in stderr: "EQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1684999004.853932,
+    'REQUEST_TIME' => 1684999004,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 07:17:20 [error] 28#28: *578 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/loc" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 07:17:20 [error] 28#28: *578 FastCGI sent in stderr: "al/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECT
+2023/05/25 07:20:41 [error] 25#25: *581 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 07:20:41 [error] 25#25: *581 FastCGI sent in stderr: "\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distribution
+2023/05/25 07:22:46 [error] 28#28: *584 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/loc" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 07:22:46 [error] 28#28: *584 FastCGI sent in stderr: "al/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECT
+2023/05/25 07:31:52 [error] 29#29: *622 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/loc" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 07:31:52 [error] 29#29: *622 FastCGI sent in stderr: "al/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECT
+2023/05/25 07:39:57 [error] 28#28: *625 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 07:39:57 [error] 28#28: *625 FastCGI sent in stderr: ".9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53198',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685000395.561994,
+    'REQUEST_TIME' => 1685000395,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 07:41:48 [error] 28#28: *625 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 07:41:48 [error] 28#28: *625 FastCGI sent in stderr: ".9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53198',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685000507.950544,
+    'REQUEST_TIME' => 1685000507,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 09:38:41 [error] 29#29: *644 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 09:38:41 [error] 29#29: *644 FastCGI sent in stderr: ".9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53268',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685007519.348217,
+    'REQUEST_TIME' => 1685007519,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 09:38:50 [error] 29#29: *644 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003'," while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 09:38:50 [error] 29#29: *644 FastCGI sent in stderr: "'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0
+2023/05/25 09:39:24 [error] 29#29: *644 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136):" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 09:39:24 [error] 29#29: *644 FastCGI sent in stderr: " yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad
+2023/05/25 09:53:43 [error] 28#28: *651 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/loc" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 09:53:43 [error] 28#28: *651 FastCGI sent in stderr: "al/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECT
+2023/05/25 10:08:46 [error] 29#29: *653 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 10:08:46 [error] 29#29: *653 FastCGI sent in stderr: "lication/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53296',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685009324.394339,
+    'REQUEST_TIME' => 1685009324,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:03:27 [error] 29#29: *668 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:03:27 [error] 29#29: *668 FastCGI sent in stderr: "www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '235',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53338',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+2023/05/25 13:06:01 [error] 29#29: *671 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:06:01 [error] 29#29: *671 FastCGI sent in stderr: ".php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) App
+2023/05/25 13:08:40 [error] 30#30: *675 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 13:08:40 [error] 30#30: *675 FastCGI sent in stderr: "=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '235',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53356',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '235',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685020119.400261,
+    'REQUEST_TIME' => 1685020119,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:10:23 [error] 30#30: *678 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 13:10:23 [error] 30#30: *678 FastCGI sent in stderr: "plication/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '235',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53366',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '235',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685020221.8481,
+    'REQUEST_TIME' => 1685020221,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:11:03 [error] 30#30: *678 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152)" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:11:03 [error] 30#30: *678 FastCGI sent in stderr: ": yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i
+2023/05/25 13:11:42 [error] 30#30: *678 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152)" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:11:42 [error] 30#30: *678 FastCGI sent in stderr: ": yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i
+2023/05/25 13:23:46 [error] 31#31: *691 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 13:23:46 [error] 31#31: *691 FastCGI sent in stderr: "   'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '235',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53402',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '235',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685021024.834273,
+    'REQUEST_TIME' => 1685021024,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:24:34 [error] 31#31: *691 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 13:24:34 [error] 31#31: *691 FastCGI sent in stderr: "; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '235',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53402',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '235',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685021073.669748,
+    'REQUEST_TIME' => 1685021073,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:25:47 [error] 31#31: *691 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 13:25:47 [error] 31#31: *691 FastCGI sent in stderr: " -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '235',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53402',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '235',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685021146.123486,
+    'REQUEST_TIME' => 1685021146,
+    'argv' => [],
+    'argc' => 0,
+]" while reading
+2023/05/25 13:28:22 [error] 30#30: *702 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
+2023/05/25 13:28:22 [error] 30#30: *702 FastCGI sent in stderr: "   'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '235',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '53444',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '235',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685021300.906966,
+    'REQUEST_TIME' => 1685021300,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/25 13:36:29 [error] 31#31: *715 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(TypeError))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(TypeError))
+#4 {main}
+Previous exception:
+TypeError: array_merge(): Argument #2 must be of type array, null given in /app/models/Rent.php:133
+Stack trace:
+#0 /app/models/Rent.php(133): array_merge(Array, NULL)
+#1 /app/models/Rent.php(121): app\models\Rent->isFreeHouse(5)
+#2 /app/controllers/SiteController.php(75): app\models\Rent->findFreeHouse()
+#3 [internal function]: app\controllers\SiteController->actionIndex()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('index', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/index', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/web/index.php(12): yii\base\Application->run()
+#10 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PH
+2023/05/25 13:36:29 [error] 31#31: *715 FastCGI sent in stderr: "> 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '235',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685021787.707307,
+    'REQUEST_TIME' => 1685021787,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/site"
+2023/05/28 04:54:38 [error] 30#30: *1096 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 04:54:38 [error] 30#30: *1096 FastCGI sent in stderr: ".9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '269',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '54632',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '269',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685249676.26285,
+    'REQUEST_TIME' => 1685249676,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 15:56:47 [error] 24#24: *1224 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 15:56:47 [error] 24#24: *1224 FastCGI sent in stderr: "ation/signed-exchange;v=b3;q=0.7',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '269',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55002',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '269',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685289407.13773,
+    'REQUEST_TIME' => 1685289407,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site/test HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/site"
+2023/05/28 15:57:30 [error] 24#24: *1224 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 15:57:30 [error] 24#24: *1224 FastCGI sent in stderr: "USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_X_CSRF_TOKEN' => 'W1wZCzgyWnPZeJBHzj2MXad46LI7zUbsUHMoval86ogyb11naGR3QZpM2i6LWfsC9B3b40-aHKgVBx7J2j6_4A==',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONTENT_LENGTH' => '34',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55002',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '34',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685289450.485412,
+    'REQUEST_TIME' => 1685289450,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site/test HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 15:57:31 [error] 24#24: *1221 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 15:57:31 [error] 24#24: *1221 FastCGI sent in stderr: "n/signed-exchange;v=b3;q=0.7',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '54992',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685289450.698353,
+    'REQUEST_TIME' => 1685289450,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site/test HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:05:51 [error] 26#26: *1238 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 16:05:51 [error] 26#26: *1238 FastCGI sent in stderr: "EMOTE_PORT' => '55036',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685289950.581929,
+    'REQUEST_TIME' => 1685289950,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site/test HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:06:16 [error] 26#26: *1238 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'h" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site/test HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:06:16 [error] 26#26: *1238 FastCGI sent in stderr: "ttps://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz.asc?a=1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    '_' => '/usr/local/sbin/php-fpm',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=d13659b9319f7356a15f5e1a992bf19f; _csrf=c399789a391597efa4f296d12debc9a1252e87dd8b45ad718d41d9ec47437101a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i3DlPV-2C4JiEdw_Se3QtWZDEt6tsBUh%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_REFERER' => 'http://5domikov/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55036',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_
+2023/05/28 16:06:52 [error] 26#26: *1238 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 16:06:52 [error] 26#26: *1238 FastCGI sent in stderr: " => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://5domikov',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '234',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55036',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '234',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => '',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685290011.302717,
+    'REQUEST_TIME' => 1685290011,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "POST /site/test HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:50:18 [error] 26#26: *1260 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 16:50:18 [error] 26#26: *1260 FastCGI sent in stderr: ".0 Safari/537.36',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_X_CSRF_TOKEN' => 'a3OsE2FDjU24kNSp5W_Js8J8qnfyW4qR_BXnWgE0Bg8CQOh_MRWgf_uknsCgC77skRmZJoYM0NW5YdEucnZTZw==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55098',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=29.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=29.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685292617.092671,
+    'REQUEST_TIME' => 1685292617,
+    'argv' => [
+        'dateStart=29.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=29.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:51:23 [error] 26#26: *1260 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 16:51:23 [error] 26#26: *1260 FastCGI sent in stderr: ".0 Safari/537.36',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_X_CSRF_TOKEN' => 'a3OsE2FDjU24kNSp5W_Js8J8qnfyW4qR_BXnWgE0Bg8CQOh_MRWgf_uknsCgC77skRmZJoYM0NW5YdEucnZTZw==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55098',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=30.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=30.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685292682.641349,
+    'REQUEST_TIME' => 1685292682,
+    'argv' => [
+        'dateStart=30.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=30.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:51:27 [error] 25#25: *1274 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 16:51:27 [error] 25#25: *1274 FastCGI sent in stderr: ".0 Safari/537.36',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_X_CSRF_TOKEN' => 'UIXkNGAhA_RwWE0kYVYTa7niE37Subz4rI6UNyygJCw5tqBYMHcuxjNsB00kMmQ06ocgL6bu5rzp-qJDX-JxRA==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55128',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=29.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=29.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685292687.170172,
+    'REQUEST_TIME' => 1685292687,
+    'argv' => [
+        'dateStart=29.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=29.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:51:47 [error] 25#25: *1274 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 16:51:47 [error] 25#25: *1274 FastCGI sent in stderr: ".0 Safari/537.36',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_X_CSRF_TOKEN' => 'SPFuoeTcUoRQobhwUATT8v57eCpxtlkrDH3LE--SOyQhwirNtIp_thOV8hkVYKStrR5LewXhA29JCf1nnNBuTA==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55128',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=29.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=29.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685292707.027614,
+    'REQUEST_TIME' => 1685292707,
+    'argv' => [
+        'dateStart=29.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=29.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:53:41 [error] 27#27: *1282 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 16:53:41 [error] 27#27: *1282 FastCGI sent in stderr: ".0 Safari/537.36',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_X_CSRF_TOKEN' => '-X4ZhYuIfe7QN7gpkxZPUGHg5-vdyvXeFZceab8F-4uQTV3p295Q3JMD8kDWcjgPMoXUuqmdr5pQ4ygdzEeu4w==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55150',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=29.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=29.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685292820.643141,
+    'REQUEST_TIME' => 1685292820,
+    'argv' => [
+        'dateStart=29.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=29.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:54:44 [error] 27#27: *1282 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/28 16:54:44 [error] 27#27: *1282 FastCGI sent in stderr: "HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_X_CSRF_TOKEN' => 'D_s6VO66NlhfrGYmHjLlne0-f_bM9osYl6FaVvn8MEJmyH44vuwbahyYLE9bVpLCvltMp7ih0VzS1Wwiir5lKg==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55150',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=29.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=29.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685292883.746142,
+    'REQUEST_TIME' => 1685292883,
+    'argv' => [
+        'dateStart=29.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=29.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 16:57:17 [error] 22#22: *1297 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 114. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 114. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL'
+2023/05/28 16:57:17 [error] 22#22: *1297 FastCGI sent in stderr: "_TOKEN' => 'mhoAg5L6JjN00B7M94QWByfeOIv7GJb6HcG6ex_dEkLzKUTvwqwLATfkVKWy4GFYdLsL2o9PzL5YtYwPbJ9HKg==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55188',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=29.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=29.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685293036.337608,
+    'REQUEST_TIME' => 1685293036,
+    'argv' => [
+        'dateStart=29.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=29.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/28 17:21:47 [error] 22#22: *1300 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 115. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 115. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL'
+2023/05/28 17:21:47 [error] 22#22: *1300 FastCGI sent in stderr: "_TOKEN' => 'mhoAg5L6JjN00B7M94QWByfeOIv7GJb6HcG6ex_dEkLzKUTvwqwLATfkVKWy4GFYdLsL2o9PzL5YtYwPbJ9HKg==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55198',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=30.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=30.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685294506.628343,
+    'REQUEST_TIME' => 1685294506,
+    'argv' => [
+        'dateStart=30.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=30.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/31 16:29:38 [error] 28#28: *1309 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 115. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 115. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL'
+2023/05/31 16:29:38 [error] 28#28: *1309 FastCGI sent in stderr: "_TOKEN' => 'w7M3-jWm7wYy4-tgTZA6596aiNc2YPaGTlTWv6mWyz6qgHOWZfDCNHHXoQkI9E24jf-7hkI3rMILIODL2tSeVg==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55222',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=31.05.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=31.05.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685550577.994138,
+    'REQUEST_TIME' => 1685550577,
+    'argv' => [
+        'dateStart=31.05.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=31.05.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/31 16:30:03 [error] 28#28: *1309 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 115. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/controllers/SiteController.php on line 115. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ASC_URL'
+2023/05/31 16:30:03 [error] 28#28: *1309 FastCGI sent in stderr: "_TOKEN' => 'w7M3-jWm7wYy4-tgTZA6596aiNc2YPaGTlTWv6mWyz6qgHOWZfDCNHHXoQkI9E24jf-7hkI3rMILIODL2tSeVg==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55222',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=01.06.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=01.06.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685550602.720723,
+    'REQUEST_TIME' => 1685550602,
+    'argv' => [
+        'dateStart=01.06.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=01.06.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/31 16:35:32 [error] 27#27: *1318 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/31 16:35:32 [error] 27#27: *1318 FastCGI sent in stderr: ".0 Safari/537.36',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_X_CSRF_TOKEN' => 'OpN7iGBYo9supfP1fQFL_IV_5cf3c2oIlvvpoRMZzltToD_kMA6O6W2RuZw4ZTyj1hrWloMkMEzTj9_VYFubMw==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55244',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=01.06.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=01.06.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685550931.96005,
+    'REQUEST_TIME' => 1685550931,
+    'argv' => [
+        'dateStart=01.06.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=01.06.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"
+2023/05/31 16:37:43 [error] 29#29: *1333 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /app/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /app/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /app/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /app/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /app/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOSTNAME' => 'c2f128e91003',
+    'PHP_VERSION' => '8.0.2',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'GPG_KEYS' => '1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F',
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie',
+    'PWD' => '/app',
+    'HOME' => '/var/www',
+    'PHP_SHA256' => '84dd6e36f48c3a71ff5dceba375c1f6b34b71d4fa9e06b720780127176468ccc',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'PHP_URL' => 'https://www.php.net/distributions/php-8.0.2.tar.xz?a=1',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'SHLVL' => '0',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
+2023/05/31 16:37:43 [error] 29#29: *1333 FastCGI sent in stderr: ".0 Safari/537.36',
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest',
+    'HTTP_X_CSRF_TOKEN' => 'PFfqSaj1U_lQIS7NZUhv7JAkIZWfqXDOMd79GtciAzVVZK4l-KN-yxMVZKQgLBizw0ESxOv-Kop0qstupGBWXQ==',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => '5domikov',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '5domikov',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '172.22.0.4',
+    'REMOTE_PORT' => '55280',
+    'REMOTE_ADDR' => '172.22.0.1',
+    'SERVER_SOFTWARE' => 'nginx/1.22.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/app/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/test?dateStart=01.06.2023',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'dateStart=01.06.2023',
+    'SCRIPT_FILENAME' => '/app/web/index.php',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1685551062.417296,
+    'REQUEST_TIME' => 1685551062,
+    'argv' => [
+        'dateStart=01.06.2023',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /site/test?dateStart=01.06.2023 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/"

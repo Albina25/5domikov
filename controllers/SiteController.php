@@ -2,9 +2,12 @@
 
 namespace app\controllers;
 
+use app\models\House;
 use app\models\Rent;
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\Json;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
@@ -62,10 +65,108 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $isRentSaved = false;
         $model = new Rent();
-        $model->id=2;
+        $error = '';
 
-        return $this->render('index', ['model' => $model]);
+/*
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post())) {
+
+                $freeHouse = $model->findFreeHouse();
+                if ($freeHouse) {
+                    $model->house_id = $freeHouse;
+                } else {
+                    $error = 'На этот период нет свободных домиков';
+                    return $this->render('index', [
+                        'model' => $model,
+                        'isRentSaved' => $isRentSaved,
+                        'error' => $error,
+                    ]);
+                };
+                $totalPrice = $model->getTotalPrice($freeHouse);
+
+                $model->price_total = $totalPrice;
+                $model->date_start = date('Y-m-d', strtotime($model->date_start));
+                $model->date_end = date('Y-m-d', strtotime($model->date_end));
+                if (!$model->isDublicate() && $model->save()) {
+                    $isRentSaved = true;
+                } else {
+                    $error = 'У вас уже есть заявка на аренду домика';
+                };
+            }
+        } else {
+            $model->loadDefaultValues();
+        }*/
+        return $this->render('index', [
+            'model' => $model,
+            'isRentSaved' => $isRentSaved,
+            'error' => $error,
+        ]);
+    }
+
+    public function actionTest()
+    {
+        //VarDumper::dump($_POST['countHouses'], 10, true);die();
+        $model = new Rent();
+
+        $isRentSaved = false;
+
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post())) {
+                $count = $_POST['countHouses'];
+                for($i = 1; $i <= $count; $i++) {
+                }
+                $freeHouse = $model->findFreeHouse();
+                if ($freeHouse) {
+                    $model->house_id = $freeHouse;
+                } else {
+                    $error = 'На этот период нет свободных домиков';
+                    return $this->render('index', [
+                        'model' => $model,
+                        'isRentSaved' => $isRentSaved,
+                        'error' => $error,
+                    ]);
+                };
+                $totalPrice = $model->getTotalPrice($freeHouse);
+
+                $model->price_total = $totalPrice;
+                $model->date_start = date('Y-m-d', strtotime($model->date_start));
+                $model->date_end = date('Y-m-d', strtotime($model->date_end));
+                /*if (!$model->isDublicate() && $model->save()) {
+                    $isRentSaved = true;
+                } else {
+                    $error = 'У вас уже есть заявка на аренду домика';
+                };*/
+            }
+        } else {
+            $model->loadDefaultValues();
+        }
+        return $this->render('index', [
+            'model' => $model,
+            'isRentSaved' => $isRentSaved,
+            'error' => $error,
+        ]);
+        /*$model = new Rent();
+
+        //$isRentSaved = false;
+
+        //if ($dateStart) {
+            if ($model->load($this->request->post())) {
+                return $this->render('index', [
+                    'model' => $model,
+                    'isRentSaved' => true,
+                    'error' => '',
+                ]);
+            //}
+        } else {
+            VarDumper::dump('Ничего не пришло 2');
+        }*/
+        /*if (isset ($_POST['data'])) {
+            VarDumper::dump('$_POST["data"]');
+        } else {
+            VarDumper::dump('Ничего не пришло');
+        }*/
     }
 
     /**
@@ -128,5 +229,31 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionBooking()
+    {
+        $model = new Rent();
+
+        $isRentSaved = false;
+
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post())) {
+                $model->date_start = date('Y-m-d', strtotime($model->date_start));
+                $model->date_end = date('Y-m-d', strtotime($model->date_end));
+                if (!$model->isDublicate() && $model->save()) {
+                    $isRentSaved = true;
+                } else {
+                    $error = 'У вас уже есть заявка на аренду домика';
+                };
+            }
+        } else {
+            $model->loadDefaultValues();
+        }
+        return $this->render('index', [
+            'model' => $model,
+            'isRentSaved' => $isRentSaved,
+            'error' => $error,
+        ]);
     }
 }

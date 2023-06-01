@@ -1,5 +1,7 @@
 <?php
 
+/** @var string $error */
+
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -32,13 +34,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'comment')->textarea(['rows' => 6]) ?>
 
-    <?/*= $form->field($model, 'created_at')->textInput() */?>
-
-
+    <?php if ($error) { ?>
+        <p class="text-error"><?= $error ?></p>
+    <?php } ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Создать', ['class' => 'btn btn-success']) ?>
     </div>
+
+
 
     <?php ActiveForm::end(); ?>
 

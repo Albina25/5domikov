@@ -28,22 +28,83 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             /*['class' => 'yii\grid\SerialColumn'],*/
-
-            'id',
+            [
+                'attribute' => 'id',
+                'contentOptions' => ['width' => '50px'],
+            ],
+            //'id',
             'house_id',
             'name',
-            'date_start',
-            'date_end',
-            //'price_total',
-            //'status',
+            /*[
+                'label' => 'Даты аренды',
+                'content' => function($model) {
+                    return (date('d.m.Y', strtotime($model->date_start))) . '-' . (date('d.m.Y', strtotime($model->date_end)));
+                },
+            ],*/
+            [
+                'attribute' => 'date_start',
+                'content' => function($model) {
+                    return (date('d.m.Y', strtotime($model->date_start)));
+                },
+            ],
+            [
+                'attribute' => 'date_end',
+                'content' => function($model) {
+                    return (date('d.m.Y', strtotime($model->date_end)));
+                },
+            ],
+            'phone',
+            'price_total',
+            [
+                "attribute" => "status",
+                "format" => "text",
+                "value" => function (Rent $model) {
+                    return $model->getStatus($model->status);
+                },
+                "contentOptions" => function ($model) {
+                    return [
+                        "class" =>($model->status === Rent::STATUS_PENDING ? "bg-waiting" : ""),
+                    ];
+                }
+            ],
             //'payment_status',
             //'comment:ntext',
             //'guests',
 
-            'email:email',
-            'phone',
-            //'created_at',
+            //'email:email',
 
+            //'created_at',
+            [
+                'header'=>'Изменить статус',
+                'format' => 'html',
+                'value' => function(Rent $model, $key, $index, $column) {
+                if ($model->status === Rent::STATUS_PENDING || $model->status === Rent::STATUS_COMPLETED) {
+                    return Html::a(
+                        'Подтвердить',
+                        Url::to(['rent/change-status', 'id' => $model->id, 'status' => Rent::STATUS_BOOKING]),
+                        [
+                            'data-id' => $model->id,
+                            'data-pjax'=>true,
+                            'action'=>Url::to(['rent/change-status']),
+                            'class'=>'btn btn-success',
+                        ]
+                    );
+                }
+                if ($model->status === Rent::STATUS_BOOKING) {
+                    return Html::a(
+                        'Завершить',
+                        Url::to(['rent/change-status', 'id' => $model->id, 'status' => Rent::STATUS_COMPLETED]),
+                        [
+                            'data-id' => $model->id,
+                            'data-pjax'=>true,
+                            'action'=>Url::to(['rent/change-status']),
+                            'class'=>'btn btn-success',
+                        ]
+                    );
+                }
+
+                }
+            ],
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Rent $model, $key, $index, $column) {
