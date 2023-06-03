@@ -42,7 +42,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </ul>
     </div>-->
     <div class="choose-date">
-        <a class="text-uppercase choose-date-link" href="/#booking">Выбрать даты</a>
+        <a class="text-uppercase choose-date-link" href="#booking">Выбрать даты</a>
     </div>
 </header>
 <!--<header id="header">

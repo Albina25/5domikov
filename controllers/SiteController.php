@@ -105,19 +105,41 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionTest()
+    public function actionSaveRents()
     {
-        //VarDumper::dump($_POST['countHouses'], 10, true);die();
         $model = new Rent();
-
+        $error = '';
         $isRentSaved = false;
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
                 $count = $_POST['countHouses'];
+                $transaction = Yii::$app->db->beginTransaction();
+                $test = 0;
                 for($i = 1; $i <= $count; $i++) {
+                    $freeHouse = $model->findFreeHouse();
+                    if ($freeHouse) {
+                        $isSaveRent = $model->saveRent($model, $freeHouse);
+                        if ($isSaveRent) {
+                            $test++;
+                        }
+                    }
                 }
-                $freeHouse = $model->findFreeHouse();
+                if ($test == $count) {
+                    $transaction->commit();
+                    $isRentSaved = true;
+                    Yii::warning('transaction->commit');
+                } else {
+                    $error = 'На этот период нет свободных домиков';
+                    $transaction->rollBack();
+                    Yii::warning('transaction->rollBack');
+                    return $this->render('index', [
+                        'model' => $model,
+                        'isRentSaved' => $isRentSaved,
+                        'error' => $error,
+                    ]);
+                }
+                /*$freeHouse = $model->findFreeHouse();
                 if ($freeHouse) {
                     $model->house_id = $freeHouse;
                 } else {
@@ -132,7 +154,7 @@ class SiteController extends Controller
 
                 $model->price_total = $totalPrice;
                 $model->date_start = date('Y-m-d', strtotime($model->date_start));
-                $model->date_end = date('Y-m-d', strtotime($model->date_end));
+                $model->date_end = date('Y-m-d', strtotime($model->date_end));*/
                 /*if (!$model->isDublicate() && $model->save()) {
                     $isRentSaved = true;
                 } else {

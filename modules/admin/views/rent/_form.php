@@ -42,8 +42,6 @@ use yii\widgets\ActiveForm;
         <?= Html::submitButton('Создать', ['class' => 'btn btn-success']) ?>
     </div>
 
-
-
     <?php ActiveForm::end(); ?>
 
 </div>

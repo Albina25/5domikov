@@ -21,7 +21,7 @@ $this->registerJs($script);*/
 
 ?>
 
-<h3 class="mb-10">Бронирование домиков</h3>
+<h4 class="mb-10 title">Бронирование домиков</h4>
     <?php Pjax::begin([
         "id" => "booking-form-pjax",
         "enablePushState" => false,
@@ -30,7 +30,7 @@ $this->registerJs($script);*/
 
     <?php $form = ActiveForm::begin([
         'id' => 'rent-form',
-        'action' => ['site/test'],
+        'action' => ['site/save-rents'],
         'options' => [
             'data-pjax' => 1,
             'class' => 'form-field position-relative flex-wrap',

@@ -46,12 +46,13 @@ class Rent extends \yii\db\ActiveRecord
     {
         return [
             [['house_id','date_start', 'date_end', 'phone'], 'required'],
-            [['date_start', 'date_end'], 'date', 'format'=>'php:Y-m-d'],
+            [['date_start', 'date_end', 'created_at'], 'date', 'format'=>'php:Y-m-d'],
             [['house_id', 'price_total', 'status', 'payment_status'], 'default', 'value' => null],
             [['status'], 'default', 'value' => self::STATUS_PENDING],
             [['house_id', 'price_total', 'status', 'payment_status'], 'integer'],
             [['date_start', 'date_end', 'created_at'], 'safe'],
             [['comment', 'name', 'phone', 'email'], 'string'],
+            //['created_at', 'default', 'value' => date('Y-m-d', time())],
         ];
     }
 
@@ -77,9 +78,19 @@ class Rent extends \yii\db\ActiveRecord
         ];
     }
 
-/*    public function behaviors()
+    public function behaviors()
     {
         return [
+            [
+                'class' => AttributeBehavior::class,
+                'value' => function () {
+                    return date('Y-m-d', strtotime($this->date_start));
+                },
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => 'date_start',
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'date_start',
+                ],
+            ],
             [
                 'class' => AttributeBehavior::class,
                 'value' => function () {
@@ -92,6 +103,16 @@ class Rent extends \yii\db\ActiveRecord
             [
                 'class' => AttributeBehavior::class,
                 'value' => function () {
+                    return date('Y-m-d', strtotime($this->date_end));
+                },
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => 'date_end',
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'date_end',
+                ],
+            ],
+            [
+                'class' => AttributeBehavior::class,
+                'value' => function () {
                     return date('d.m.Y', strtotime($this->date_end));
                 },
                 'attributes' => [
@@ -99,7 +120,7 @@ class Rent extends \yii\db\ActiveRecord
                 ],
             ],
         ];
-    }*/
+    }
 
     public static function status()
     {
@@ -223,5 +244,35 @@ class Rent extends \yii\db\ActiveRecord
             }
         }
         return $totalPrice;
+    }
+
+    public function saveRent($model, $freeHouse)
+    {
+        $rent = new Rent;
+        $rent->house_id = $freeHouse;
+        $totalPrice = $this->getTotalPrice($freeHouse);
+        $rent->price_total = $totalPrice;
+        $rent->date_start = date('Y-m-d', strtotime($model->date_start));
+        $rent->date_end = date('Y-m-d', strtotime($model->date_end));
+        $rent->comment = $model->comment;
+        $rent->name = $model->name;
+        $rent->email = $model->email;
+        $rent->phone = $model->phone;
+
+        return $rent->save();
+    }
+
+    public static function rentsInPending()
+    {
+        return Rent::find()->where(['status' => self::STATUS_PENDING])->count();
+    }
+
+    public function saveRent1()
+    {
+        $this->date_start = date('Y-m-d', strtotime($this->date_start));
+        $this->date_end = date('Y-m-d', strtotime($this->date_end));
+        $totalPrice = $this->getTotalPrice($this->house_id);
+        $this->price_total = $totalPrice;
+        return $this->save();
     }
 }

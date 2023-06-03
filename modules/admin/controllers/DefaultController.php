@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\Rent;
 use yii\web\Controller;
 
 /**
@@ -15,6 +16,7 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $countRentsInPending = Rent::rentsInPending();
+        return $this->render('index', ['countRentsInPending' => $countRentsInPending]);
     }
 }

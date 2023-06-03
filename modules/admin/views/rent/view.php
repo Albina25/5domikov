@@ -1,5 +1,6 @@
 <?php
 
+use app\models\Rent;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
@@ -32,13 +33,31 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'house_id',
             'price_total',
-            'status',
+            [
+                "attribute" => "status",
+                "format" => "text",
+                "value" => function (Rent $model) {
+                    return $model->getStatus($model->status);
+                },
+            ],
             'payment_status',
             'comment:ntext',
             'guests',
             'name',
             'email:email',
             'phone',
+            [
+                'attribute' => 'date_start',
+                'content' => function($model) {
+                    return (date('d.m.Y', strtotime($model->date_start)));
+                },
+            ],
+            [
+                'attribute' => 'date_end',
+                'content' => function($model) {
+                    return (date('d.m.Y', strtotime($model->date_end)));
+                },
+            ],
             'created_at',
             'date_start',
             'date_end',

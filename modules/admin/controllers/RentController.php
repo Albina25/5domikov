@@ -101,10 +101,10 @@ class RentController extends Controller
         $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post())) {
-            if (!$model->isDublicate() && $model->save()) {
+            if ($model->saveRent1()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
-                $error = 'Такая заявка уже есть';
+                $error = 'Данные не были обновлены';
             }
         }
 
