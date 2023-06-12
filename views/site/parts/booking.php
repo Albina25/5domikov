@@ -81,7 +81,7 @@ $this->registerJs($script);*/
     <?php } ?>
 
    <div class="form-group">
-        <?= Html::submitButton('Забронировать', ['class' => 'btn btn-primary btn-test']) ?>
+        <?= Html::submitButton('Забронировать', ['class' => 'btn-test']) ?>
    </div>
 
     <?php ActiveForm::end(); ?>
