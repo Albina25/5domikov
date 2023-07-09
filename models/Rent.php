@@ -4,6 +4,8 @@ namespace app\models;
 
 use Yii;
 use yii\behaviors\AttributeBehavior;
+use yii\behaviors\BlameableBehavior;
+use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\helpers\VarDumper;
 
@@ -26,10 +28,12 @@ use yii\helpers\VarDumper;
  */
 class Rent extends \yii\db\ActiveRecord
 {
-    const STATUS_CENCEL = 0;
+    const STATUS_PENDING = 0;
     const STATUS_BOOKING = 1;
-    const STATUS_PENDING = 2;
-    const STATUS_COMPLETED = 3;
+    const STATUS_COMPLETED = 2;
+    const STATUS_CENCEL = 3;
+
+    //public $countHouses = 1;
 
     /**
      * {@inheritdoc}
@@ -46,13 +50,13 @@ class Rent extends \yii\db\ActiveRecord
     {
         return [
             [['house_id','date_start', 'date_end', 'phone'], 'required'],
-            [['date_start', 'date_end', 'created_at'], 'date', 'format'=>'php:Y-m-d'],
             [['house_id', 'price_total', 'status', 'payment_status'], 'default', 'value' => null],
+            ['house_id', 'default', 'value' => null],
             [['status'], 'default', 'value' => self::STATUS_PENDING],
             [['house_id', 'price_total', 'status', 'payment_status'], 'integer'],
-            [['date_start', 'date_end', 'created_at'], 'safe'],
+            /*[['date_start', 'date_end', 'created_at'], 'safe'],*/
             [['comment', 'name', 'phone', 'email'], 'string'],
-            //['created_at', 'default', 'value' => date('Y-m-d', time())],
+            /*['created_at', 'default', 'value' => time()],*/
         ];
     }
 
@@ -75,12 +79,18 @@ class Rent extends \yii\db\ActiveRecord
             'email' => 'Email',
             'phone' => 'Телефон',
             'guests' => 'Количество гостей',
+            //'countHouses' => 'Количество домиков'
         ];
     }
 
     public function behaviors()
     {
         return [
+            [
+                'class' => TimestampBehavior::class,
+                'updatedAtAttribute' => 'updated_at',
+                'value' => date('Y-m-d H:i:s', time()),
+            ],
             [
                 'class' => AttributeBehavior::class,
                 'value' => function () {
@@ -91,7 +101,7 @@ class Rent extends \yii\db\ActiveRecord
                     ActiveRecord::EVENT_BEFORE_UPDATE => 'date_start',
                 ],
             ],
-            [
+            /*[
                 'class' => AttributeBehavior::class,
                 'value' => function () {
                     return date('d.m.Y', strtotime($this->date_start));
@@ -99,7 +109,7 @@ class Rent extends \yii\db\ActiveRecord
                 'attributes' => [
                     ActiveRecord::EVENT_AFTER_FIND => 'date_start',
                 ],
-            ],
+            ],*/
             [
                 'class' => AttributeBehavior::class,
                 'value' => function () {
@@ -110,7 +120,7 @@ class Rent extends \yii\db\ActiveRecord
                     ActiveRecord::EVENT_BEFORE_UPDATE => 'date_end',
                 ],
             ],
-            [
+            /*[
                 'class' => AttributeBehavior::class,
                 'value' => function () {
                     return date('d.m.Y', strtotime($this->date_end));
@@ -118,7 +128,7 @@ class Rent extends \yii\db\ActiveRecord
                 'attributes' => [
                     ActiveRecord::EVENT_AFTER_FIND => 'date_end',
                 ],
-            ],
+            ],*/
         ];
     }
 
@@ -173,11 +183,11 @@ class Rent extends \yii\db\ActiveRecord
 
     public function findFreeHouse()
     {
-        $countHouses = count(House::find()->all());
-        for ($houseId = 1; $houseId <= $countHouses; $houseId++) {
-            $freeHouse = $this->isFreeHouse($houseId);
-            if ($freeHouse) {
-                return $freeHouse;
+        $countAllHouses = count(House::find()->all());
+        for ($houseId = 1; $houseId <= $countAllHouses; $houseId++) {
+            $freeHouseId = $this->isFreeHouse($houseId);
+            if ($freeHouseId) {
+                return $freeHouseId;
             }
         }
         return false;
@@ -186,7 +196,6 @@ class Rent extends \yii\db\ActiveRecord
     public function isFreeHouse($houseId)
     {
         $bookedDays = $this->bookedDaysInHouse($houseId);
-        //VarDumper::dump(array_merge($bookedDays[0], $bookedDays[1]), 10, true);die();
         if ($bookedDays[1] && in_array($this->date_start, array_merge($bookedDays[0], $bookedDays[1])))  {
             return false;
         }
@@ -206,7 +215,7 @@ class Rent extends \yii\db\ActiveRecord
     {
         $dates = [];
 
-        $rents = Rent::find()->where(['house_id' => $houseId])->all();
+        $rents = Rent::find()->where(['house_id' => $houseId, 'status' => [self::STATUS_BOOKING, self::STATUS_PENDING]])->all();
         foreach($rents as $rent) {
             /*$dates[] = ['date'=>$rent->date_start, 'status'=>0];
             $dates[] = ['date'=>$rent->date_end, 'status'=>2];
@@ -214,14 +223,14 @@ class Rent extends \yii\db\ActiveRecord
             foreach ($period as $date) {
                 $dates[] =  ['date'=>$date, 'status'=>1];;
             }*/
-            $dates[0][] = $rent->date_start;
+            $dates[0][] = date('Y-m-d', strtotime($rent->date_start));
 
             $period = $this->periodBetweenDates($rent->date_start, $rent->date_end);
             foreach ($period as $date) {
                 $dates[1][] =  $date;
             }
 
-            $dates[2][] = $rent->date_end;
+            $dates[2][] = date('Y-m-d', strtotime($rent->date_end));
         }
         return $dates;
     }
@@ -246,12 +255,29 @@ class Rent extends \yii\db\ActiveRecord
         return $totalPrice;
     }
 
-    public function saveRent($model, $freeHouse)
+    public function saveRents($model, $countHouses)
+    {
+        $countRentedHouses = 0;
+        for($i = 1; $i <= $countHouses; $i++) {
+            $houseId = $this->findFreeHouse();
+            if ($houseId) {
+                $isSaveRent = $this->saveNewRent($model, $houseId);
+                if ($isSaveRent) {
+                    $countRentedHouses++;
+                }
+            }
+        }
+        return $countRentedHouses;
+    }
+
+    public function saveNewRent($model, $houseId)
     {
         $rent = new Rent;
-        $rent->house_id = $freeHouse;
-        $totalPrice = $this->getTotalPrice($freeHouse);
-        $rent->price_total = $totalPrice;
+        $rent->house_id = $houseId;
+        if (!$model->price_total && $model->price_total <= 0) {
+            $totalPrice = $this->getTotalPrice($houseId);
+            $rent->price_total = $totalPrice;
+        }
         $rent->date_start = date('Y-m-d', strtotime($model->date_start));
         $rent->date_end = date('Y-m-d', strtotime($model->date_end));
         $rent->comment = $model->comment;
@@ -267,12 +293,13 @@ class Rent extends \yii\db\ActiveRecord
         return Rent::find()->where(['status' => self::STATUS_PENDING])->count();
     }
 
-    public function saveRent1()
+    public function updateRent()
     {
-        $this->date_start = date('Y-m-d', strtotime($this->date_start));
-        $this->date_end = date('Y-m-d', strtotime($this->date_end));
-        $totalPrice = $this->getTotalPrice($this->house_id);
-        $this->price_total = $totalPrice;
+        if (!$this->price_total) {
+            $totalPrice = $this->getTotalPrice($this->house_id);
+            $this->price_total = $totalPrice;
+        }
+
         return $this->save();
     }
 }

@@ -6,10 +6,13 @@
 /** @var Exception$exception */
 
 use yii\helpers\Html;
+use app\assets\AppAsset;
+
+AppAsset::register($this);
 
 $this->title = $name;
 ?>
-<div class="site-error">
+<div class="site-error mt-header container">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -18,10 +21,16 @@ $this->title = $name;
     </div>
 
     <p>
-        The above error occurred while the Web server was processing your request.
+        Невозможно отобразить страницу.
     </p>
     <p>
-        Please contact us if you think this is a server error. Thank you.
+        Пожалуйста, свяжитесь с нами.
     </p>
 
 </div>
+
+<style>
+    .mt-header {
+        margin-top: var(--header-size, 65px);
+    }
+</style>

@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use app\models\Rent;
 use app\models\RentSearch;
+use DateTime;
 use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -72,7 +73,7 @@ class RentController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
-                if (!$model->isDublicate() && $model->save()) {
+                if (!$model->isDublicate() && $model->updateRent()) {
                     return $this->redirect(['view', 'id' => $model->id]);
                 } else {
                     $error = 'Такая заявка уже есть';
@@ -101,7 +102,7 @@ class RentController extends Controller
         $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post())) {
-            if ($model->saveRent1()) {
+            if ($model->updateRent()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 $error = 'Данные не были обновлены';
@@ -149,7 +150,16 @@ class RentController extends Controller
         $model = $this->findModel($id);
         if ($model) {
             $model->status = $status;
+            if ((int)$status === Rent::STATUS_PENDING) {
+                $freeHouseId = $model->findFreeHouse();
+                $model->house_id = $freeHouseId;
+                if (!$freeHouseId) {
+                    $model->status = Rent::STATUS_CENCEL;
+                }
+            }
+
             $model->save();
+
         }
         return $this->redirect(['index']);
     }

@@ -33,7 +33,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'contentOptions' => ['width' => '50px'],
             ],
             //'id',
-            'house_id',
+            [
+                'attribute' => 'house_id',
+                'contentOptions' => ['width' => '50px'],
+            ],
             'name',
             /*[
                 'label' => 'Даты аренды',
@@ -43,15 +46,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ],*/
             [
                 'attribute' => 'date_start',
-                'content' => function($model) {
-                    return (date('d.m.Y', strtotime($model->date_start)));
-                },
+                'format' =>  ['date', 'dd.MM.YYYY'],
             ],
             [
                 'attribute' => 'date_end',
-                'content' => function($model) {
+                'format' =>  ['date', 'dd.MM.YYYY'],
+                /*'content' => function($model) {
                     return (date('d.m.Y', strtotime($model->date_end)));
-                },
+                },*/
             ],
             'phone',
             'price_total',
@@ -65,7 +67,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     return [
                         "class" =>($model->status === Rent::STATUS_PENDING ? "bg-waiting" : ""),
                     ];
-                }
+                },
+                "filter" => Rent::status(),
             ],
             //'payment_status',
             //'comment:ntext',
@@ -75,35 +78,62 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //'created_at',
             [
-                'header'=>'Изменить статус',
-                'format' => 'html',
-                'value' => function(Rent $model, $key, $index, $column) {
-                if ($model->status === Rent::STATUS_PENDING || $model->status === Rent::STATUS_COMPLETED) {
-                    return Html::a(
-                        'Подтвердить',
-                        Url::to(['rent/change-status', 'id' => $model->id, 'status' => Rent::STATUS_BOOKING]),
-                        [
-                            'data-id' => $model->id,
-                            'data-pjax'=>true,
-                            'action'=>Url::to(['rent/change-status']),
-                            'class'=>'btn btn-success',
-                        ]
-                    );
-                }
-                if ($model->status === Rent::STATUS_BOOKING) {
-                    return Html::a(
-                        'Завершить',
-                        Url::to(['rent/change-status', 'id' => $model->id, 'status' => Rent::STATUS_COMPLETED]),
-                        [
-                            'data-id' => $model->id,
-                            'data-pjax'=>true,
-                            'action'=>Url::to(['rent/change-status']),
-                            'class'=>'btn btn-success',
-                        ]
-                    );
-                }
-
-                }
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{next_status} {cencel_status}',
+                'contentOptions' => ['class' => 'buttons-container'],
+                'buttons' => [
+                    'next_status' => function ($url, $model) {
+                        if ($model->status === Rent::STATUS_PENDING) {
+                            return Html::a(
+                                'Подтвердить',
+                                Url::to(['rent/change-status', 'id' => $model->id, 'status' => Rent::STATUS_BOOKING]),
+                                [
+                                    'data-id' => $model->id,
+                                    'data-pjax'=>true,
+                                    'action'=>Url::to(['rent/change-status']),
+                                    'class'=>'btn btn-success w-100',
+                                ]
+                            );
+                        }
+                        if ($model->status === Rent::STATUS_BOOKING) {
+                            return Html::a(
+                                'Завершить',
+                                Url::to(['rent/change-status', 'id' => $model->id, 'status' => Rent::STATUS_COMPLETED]),
+                                [
+                                    'data-id' => $model->id,
+                                    'data-pjax'=>true,
+                                    'action'=>Url::to(['rent/change-status']),
+                                    'class'=>'btn btn-success w-100',
+                                ]
+                            );
+                        }
+                    },
+                    'cencel_status' => function ($url, $model) {
+                        if ($model->status != Rent::STATUS_CENCEL) {
+                            return Html::a(
+                                'Отменить',
+                                Url::to(['rent/change-status', 'id' => $model->id, 'status' => Rent::STATUS_CENCEL]),
+                                [
+                                    'data-id' => $model->id,
+                                    'data-pjax' => true,
+                                    'action' => Url::to(['rent/change-status']),
+                                    'class' => 'btn btn-outline-warning w-100',
+                                ]
+                            );
+                        } elseif ($model->status === Rent::STATUS_CENCEL) {
+                            return Html::a(
+                                'Восстановить',
+                                Url::to(['rent/change-status', 'id' => $model->id, 'status' => Rent::STATUS_PENDING]),
+                                [
+                                    'data-id' => $model->id,
+                                    'data-pjax' => true,
+                                    'action' => Url::to(['rent/change-status']),
+                                    'class' => 'btn btn-outline-primary w-100',
+                                ]
+                            );
+                        }
+                    },
+                ],
             ],
             [
                 'class' => ActionColumn::className(),
@@ -116,3 +146,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 </div>
+
+<style>
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+</style>

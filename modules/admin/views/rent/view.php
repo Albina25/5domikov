@@ -14,14 +14,14 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="rent-view container flex-wrap">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>Заявка на аренду №<?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Вы уверены, что хотите удалить заявку?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -46,21 +46,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'email:email',
             'phone',
-            [
-                'attribute' => 'date_start',
-                'content' => function($model) {
-                    return (date('d.m.Y', strtotime($model->date_start)));
-                },
-            ],
-            [
-                'attribute' => 'date_end',
-                'content' => function($model) {
-                    return (date('d.m.Y', strtotime($model->date_end)));
-                },
-            ],
-            'created_at',
             'date_start',
             'date_end',
+            [
+                'attribute' => 'created_at',
+                'format' =>  ['date', 'dd.MM.YYYY'],
+            ],
         ],
     ]) ?>
 

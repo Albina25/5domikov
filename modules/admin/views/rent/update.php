@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\Rent $model */
 
-$this->title = 'Изменить заявку ' . $model->id;
+$this->title = 'Изменить заявку №' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Rents', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

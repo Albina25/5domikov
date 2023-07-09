@@ -11,6 +11,7 @@ use Yii;
  * @property string|null $name
  * @property string|null $email
  * @property string|null $phone
+ * @property string|null $password
  */
 class User extends \yii\db\ActiveRecord
 {
@@ -39,9 +40,19 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'name' => 'Имя',
             'email' => 'Email',
-            'phone' => 'Phone',
+            'phone' => 'Телефон',
         ];
+    }
+
+    public static function findByEmail($email)
+    {
+        return User::find()->where(['email' => $email])->one();
+    }
+
+    public function create()
+    {
+        return $this->save(false);
     }
 }

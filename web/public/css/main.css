@@ -197,6 +197,9 @@
 .mb-10 {
   margin-bottom: 10px; }
 
+.mt-header {
+  margin-top: var(--header-size, 65px); }
+
 .position-relative {
   position: relative; }
 

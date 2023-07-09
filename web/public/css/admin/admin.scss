@@ -52,3 +52,9 @@
 .bg-waiting {
   background-color: rgba(var(--waiting-color-rgb), 0.7) !important;
 }
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

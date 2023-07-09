@@ -40,7 +40,7 @@ class RentSearch extends Rent
      */
     public function search($params)
     {
-        $query = Rent::find();
+        $query = Rent::find()->orderBy(['status' => SORT_ASC, 'created_at' => SORT_DESC]);
 
         // add conditions that should always apply here
 

@@ -42,6 +42,7 @@ $this->registerJs($script);*/
         <?= Html::input('number', 'countHouses', 1,  ['class' => 'form-control', 'id' => 'countHouses']) ?>
     </div>
 
+
     <?= $form->field($model, 'date_start')->widget(DatePicker::classname(), [
         'name' => 'dp_1',
         'type' => DatePicker::TYPE_INPUT,

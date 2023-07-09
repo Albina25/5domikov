@@ -69,35 +69,6 @@ class SiteController extends Controller
         $model = new Rent();
         $error = '';
 
-/*
-        if ($this->request->isPost) {
-            if ($model->load($this->request->post())) {
-
-                $freeHouse = $model->findFreeHouse();
-                if ($freeHouse) {
-                    $model->house_id = $freeHouse;
-                } else {
-                    $error = 'На этот период нет свободных домиков';
-                    return $this->render('index', [
-                        'model' => $model,
-                        'isRentSaved' => $isRentSaved,
-                        'error' => $error,
-                    ]);
-                };
-                $totalPrice = $model->getTotalPrice($freeHouse);
-
-                $model->price_total = $totalPrice;
-                $model->date_start = date('Y-m-d', strtotime($model->date_start));
-                $model->date_end = date('Y-m-d', strtotime($model->date_end));
-                if (!$model->isDublicate() && $model->save()) {
-                    $isRentSaved = true;
-                } else {
-                    $error = 'У вас уже есть заявка на аренду домика';
-                };
-            }
-        } else {
-            $model->loadDefaultValues();
-        }*/
         return $this->render('index', [
             'model' => $model,
             'isRentSaved' => $isRentSaved,
@@ -113,22 +84,14 @@ class SiteController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
-                $count = $_POST['countHouses'];
+                $countHouses = $_POST['countHouses'];
                 $transaction = Yii::$app->db->beginTransaction();
-                $test = 0;
-                for($i = 1; $i <= $count; $i++) {
-                    $freeHouse = $model->findFreeHouse();
-                    if ($freeHouse) {
-                        $isSaveRent = $model->saveRent($model, $freeHouse);
-                        if ($isSaveRent) {
-                            $test++;
-                        }
-                    }
-                }
-                if ($test == $count) {
+                $countRentedHouses = $model->saveRents($model, $countHouses);
+                if ($countRentedHouses == $countHouses) {
                     $transaction->commit();
                     $isRentSaved = true;
-                    Yii::warning('transaction->commit');
+                    $model->loadDefaultValues();
+                    /*$model = new Rent();*/
                 } else {
                     $error = 'На этот период нет свободных домиков';
                     $transaction->rollBack();
@@ -139,27 +102,6 @@ class SiteController extends Controller
                         'error' => $error,
                     ]);
                 }
-                /*$freeHouse = $model->findFreeHouse();
-                if ($freeHouse) {
-                    $model->house_id = $freeHouse;
-                } else {
-                    $error = 'На этот период нет свободных домиков';
-                    return $this->render('index', [
-                        'model' => $model,
-                        'isRentSaved' => $isRentSaved,
-                        'error' => $error,
-                    ]);
-                };
-                $totalPrice = $model->getTotalPrice($freeHouse);
-
-                $model->price_total = $totalPrice;
-                $model->date_start = date('Y-m-d', strtotime($model->date_start));
-                $model->date_end = date('Y-m-d', strtotime($model->date_end));*/
-                /*if (!$model->isDublicate() && $model->save()) {
-                    $isRentSaved = true;
-                } else {
-                    $error = 'У вас уже есть заявка на аренду домика';
-                };*/
             }
         } else {
             $model->loadDefaultValues();
@@ -169,26 +111,6 @@ class SiteController extends Controller
             'isRentSaved' => $isRentSaved,
             'error' => $error,
         ]);
-        /*$model = new Rent();
-
-        //$isRentSaved = false;
-
-        //if ($dateStart) {
-            if ($model->load($this->request->post())) {
-                return $this->render('index', [
-                    'model' => $model,
-                    'isRentSaved' => true,
-                    'error' => '',
-                ]);
-            //}
-        } else {
-            VarDumper::dump('Ничего не пришло 2');
-        }*/
-        /*if (isset ($_POST['data'])) {
-            VarDumper::dump('$_POST["data"]');
-        } else {
-            VarDumper::dump('Ничего не пришло');
-        }*/
     }
 
     /**
@@ -196,7 +118,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
+/*    public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -211,19 +133,19 @@ class SiteController extends Controller
         return $this->render('login', [
             'model' => $model,
         ]);
-    }
+    }*/
 
     /**
      * Logout action.
      *
      * @return Response
      */
-    public function actionLogout()
+    /*public function actionLogout()
     {
         Yii::$app->user->logout();
 
         return $this->goHome();
-    }
+    }*/
 
     /**
      * Displays contact page.
@@ -243,16 +165,6 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
-
     public function actionBooking()
     {
         $model = new Rent();
@@ -261,8 +173,6 @@ class SiteController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
-                $model->date_start = date('Y-m-d', strtotime($model->date_start));
-                $model->date_end = date('Y-m-d', strtotime($model->date_end));
                 if (!$model->isDublicate() && $model->save()) {
                     $isRentSaved = true;
                 } else {

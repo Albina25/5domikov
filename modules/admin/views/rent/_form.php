@@ -26,11 +26,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'date_end')->textInput() ?>
 
-    <?/*= $form->field($model, 'price_total')->textInput() */?>
+    <?= $form->field($model, 'price_total')->textInput(['placeholder' => 'Необязательное поле']) ?>
 
-    <?/*= $form->field($model, 'status')->textInput() */?>
+    <!--<?/*= $form->field($model, 'status')->textInput() */?>
 
-    <?/*= $form->field($model, 'payment_status')->textInput() */?>
+    <?/*= $form->field($model, 'payment_status')->textInput() */?>-->
 
     <?= $form->field($model, 'comment')->textarea(['rows' => 6]) ?>
 
@@ -38,8 +38,8 @@ use yii\widgets\ActiveForm;
         <p class="text-error"><?= $error ?></p>
     <?php } ?>
 
-    <div class="form-group">
-        <?= Html::submitButton('Создать', ['class' => 'btn btn-success']) ?>
+    <div class="form-group mt-2">
+        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

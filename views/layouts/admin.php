@@ -70,7 +70,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 
 
-<main id="main" class="main-block">
+<main id="main" class="main-block mt-header">
     <?php /*if (!empty($this->params['breadcrumbs'])): */?><!--
         <?/*= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) */?>
     <?php /*endif */?>
