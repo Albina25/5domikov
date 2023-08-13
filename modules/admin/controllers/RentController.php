@@ -4,7 +4,10 @@ namespace app\modules\admin\controllers;
 
 use app\models\Rent;
 use app\models\RentSearch;
+use app\models\User;
 use DateTime;
+use Yii;
+use yii\filters\AccessControl;
 use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -18,7 +21,8 @@ class RentController extends Controller
     /**
      * @inheritDoc
      */
-    public function behaviors()
+
+    /*public function behaviors()
     {
         return array_merge(
             parent::behaviors(),
@@ -31,7 +35,7 @@ class RentController extends Controller
                 ],
             ]
         );
-    }
+    }*/
 
     /**
      * Lists all Rent models.
@@ -40,6 +44,7 @@ class RentController extends Controller
      */
     public function actionIndex()
     {
+        Rent::autoChangeRentStatuses();
         $searchModel = new RentSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
@@ -162,5 +167,10 @@ class RentController extends Controller
 
         }
         return $this->redirect(['index']);
+    }
+
+    public function actionTest()
+    {
+        Rent::autoChangeRentStatuses();
     }
 }

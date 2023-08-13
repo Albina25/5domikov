@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use DateTime;
 use Yii;
 use yii\behaviors\AttributeBehavior;
 use yii\behaviors\BlameableBehavior;
@@ -32,6 +33,7 @@ class Rent extends \yii\db\ActiveRecord
     const STATUS_BOOKING = 1;
     const STATUS_COMPLETED = 2;
     const STATUS_CENCEL = 3;
+    const STATUS_OVERDUE = 4;
 
     //public $countHouses = 1;
 
@@ -139,6 +141,7 @@ class Rent extends \yii\db\ActiveRecord
             self::STATUS_BOOKING => 'Забронировано',
             self::STATUS_PENDING => 'В ожидании',
             self::STATUS_COMPLETED => 'Завершено',
+            self::STATUS_OVERDUE => 'Просрочено',
         ];
     }
 
@@ -301,5 +304,20 @@ class Rent extends \yii\db\ActiveRecord
         }
 
         return $this->save();
+    }
+
+    public static function autoChangeRentStatuses()
+    {
+        $tomorrow = (new DateTime('tomorrow midnight'))->getTimestamp();
+        $tomorrow = date('Y-m-d H:i:s', $tomorrow);
+        $rents = Rent::find()
+            ->where(['<', 'date_start', $tomorrow])
+            ->andWhere(['status' => [Rent::STATUS_PENDING, Rent::STATUS_BOOKING]])
+            ->all();
+
+        foreach ($rents as $rent) {
+            $rent->status = Rent::STATUS_OVERDUE;
+            $rent->save();
+        }
     }
 }

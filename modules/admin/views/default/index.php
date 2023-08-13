@@ -1,5 +1,6 @@
 <?php
 $this->title = 'Пять домиков';
+$a = Yii::$app->controller->getRoute();
 ?>
 
 <div class="admin-default-index container">

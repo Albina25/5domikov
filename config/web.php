@@ -9,6 +9,7 @@ $config = [
     'bootstrap' => ['log'],
     'name' => 'Пять домиков',
     'language' => 'ru-RU',
+    /*'defaultRoute' => 'admin/auth/login',*/
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',

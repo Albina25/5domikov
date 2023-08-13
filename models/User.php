@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "user".
@@ -12,8 +13,9 @@ use Yii;
  * @property string|null $email
  * @property string|null $phone
  * @property string|null $password
+ * @property string|null $isAdmin
  */
-class User extends \yii\db\ActiveRecord
+class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
     /**
      * {@inheritdoc}
@@ -30,6 +32,7 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'email', 'phone'], 'string', 'max' => 255],
+            ['isAdmin', 'integer'],
         ];
     }
 
@@ -43,7 +46,17 @@ class User extends \yii\db\ActiveRecord
             'name' => 'Имя',
             'email' => 'Email',
             'phone' => 'Телефон',
+            'isAdmin' => ''
         ];
+    }
+
+    public function validatePassword($password)
+    {
+        return Yii::$app->security->validatePassword(
+            $password,
+            $this->password
+        );
+        /*return ($this->password === $password) ? true : false;*/
     }
 
     public static function findByEmail($email)
@@ -54,5 +67,30 @@ class User extends \yii\db\ActiveRecord
     public function create()
     {
         return $this->save(false);
+    }
+
+    public static function findIdentity($id)
+    {
+        return User::findOne($id);
+    }
+
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        // TODO: Implement findIdentityByAccessToken() method.
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getAuthKey()
+    {
+        // TODO: Implement getAuthKey() method.
+    }
+
+    public function validateAuthKey($authKey)
+    {
+        // TODO: Implement validateAuthKey() method.
     }
 }

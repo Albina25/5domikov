@@ -9,7 +9,7 @@ use yii\web\Controller;
 
 class AuthController extends Controller
 {
-    public function actionLogin()
+    /*public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -31,7 +31,7 @@ class AuthController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
-    }
+    }*/
 
     public function actionSignup()
     {
@@ -40,13 +40,15 @@ class AuthController extends Controller
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
             if ($model->signup()) {
-                return $this->redirect(['auth/login']);
+                return $this->render('signup',[
+                    'model' => $model
+                ]);
             }
         }
 
+        $this->layout = 'admin';
         return $this->render('signup',[
-            'model' => $model
-        ]);
-
+        'model' => $model
+    ]);
     }
 }

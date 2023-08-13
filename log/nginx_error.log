@@ -7053,3 +7053,19 @@ $_SERVER = [
     ],
     'argc' => 1,
 ]" while reading upstream, client: 172.22.0.1, server: 5domikov, request: "GET /admin/rent/change-status?id=1&status=0 HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/admin/rent/index"
+2023/07/16 14:59:39 [error] 26#26: *360 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught yii\base\UnknownPropertyException: Setting unknown property: yii\web\ErrorHandler::adminErrorAction in /app/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/BaseYii.php(558): yii\base\Component->__set('adminErrorActio...', 'admin/default/e...')
+#1 /app/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure(Object(yii\web\ErrorHandler), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /app/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#4 /app/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build('yii\\web\\ErrorHa...', Array, Array)
+#5 /app/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\web\\ErrorHa...', Array, Array)
+#6 /app/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#7 /app/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get('errorHandler', true)
+#8 /app/vendor/yiisoft/yii2/web/Application.php(151): yii\base\Module->get('errorHandler')
+#9 /app/vendor/yiisoft/yii2/base/Application.php(345): yii\web\Application->getErrorHandler()
+#10 /app/vendor/yiisoft/yii2/base/Application.php(202): yii\base\Application->registerErrorHandler(Array)
+#11 /app/web/index.php(12): yii\base\Application->__construct(Array)
+#12 {main}
+  thrown in /app/vendor/yiisoft/yii2/base/Component.php on line 209" while reading response header from upstream, client: 172.22.0.1, server: 5domikov, request: "GET /admin/default/index HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "5domikov", referrer: "http://5domikov/admin/auth/login"
